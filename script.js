@@ -32,8 +32,9 @@ cal.onkeyup = function(event) {
 
 function solve() {
     let x = document.getElementById("result").value
-    let y = math.evaluate(x)
+    let y = eval(x)
     document.getElementById("result").value = y
+    return y
 
 }
 
@@ -46,6 +47,6 @@ function clr() {
 }
 
 function del() {
-    document.getElementById("result").value = " "
+    document.getElementById('result').value = document.getElementById('result').value.slice(0, -1) /*This deletes the digits one by one */
 
 }
